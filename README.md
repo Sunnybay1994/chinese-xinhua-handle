@@ -2,6 +2,15 @@
 
 中华新华字典数据库和 API 。收录包括 14032 条歇后语，16142 个汉字，264434 个词语，31648 个成语。
 
+## handle(chinese wordle) support
+
+just execute 'handle.py' under directory 'proc', instructions will show on the terminal.
+```bash
+cd proc
+python handle.py
+```
+两次猜出汉兜不是梦！
+
 ## Project Structure
 
 ```
