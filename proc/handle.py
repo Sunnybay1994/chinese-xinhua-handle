@@ -126,7 +126,11 @@ example:
 ''')
 
 result = idiom_data
+count = 0
 while(True):
+    count += 1
+    print('Round %d'%count)
+
     sd_raw = input('shengdiao: ')
     if sd_raw:
         lsd = list(sd_raw)
@@ -147,7 +151,11 @@ while(True):
             else:
                 inc += '0'
                 exc += '0'
-        result = list(filter_shengdiao(result,include=inc,exclude=exc,show=True))
+        result = list(filter_shengdiao(result,include=inc,exclude=exc,show=True)) 
+    if not result:
+        print('*** Nothing left, restart. ***')
+        result = idiom_data
+        count = 0
 
     sy_raw = input('shengmu/yunmu: ')
     if sy_raw:
@@ -167,6 +175,10 @@ while(True):
                     else:
                         exc += [sy]
         result = list(filter_shengmuyunmu(result,exclude=exc,position_include=pinc,position_exclude=pexc,show=True))
+    if not result:
+        print('*** Nothing left, restart. ***')
+        result = idiom_data
+        count = 0
 
     hz_raw = input('hanzi汉字: ')
     if hz_raw:
@@ -177,6 +189,11 @@ while(True):
         else:
             pos = 0
         result = list(filter_hanzi(result,hanzi=hz,position=pos,show=True))
+    if not result:
+        print('*** Nothing left, restart. ***')
+        result = idiom_data
+        count = 0
+
     
     if not (sd_raw or sy_raw or hz_raw):
         break
