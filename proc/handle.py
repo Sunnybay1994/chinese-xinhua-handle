@@ -84,7 +84,6 @@ def filter_hanzi(data,hanzi,position=0,show=False):
         if position == 0:
             if hanzi in chengyu['word']:
                 count += 1
-                print(chengyu)
                 if show and count<1000: print('%03d'%count,chengyu['word'],'%6s%6s%6s%6s'%tuple(chengyu['pinyin']))
                 yield chengyu
         else:
