@@ -4,12 +4,15 @@
 
 ## handle(chinese wordle) support
 
-just execute 'handle.py' under directory 'proc', instructions will show on the terminal.
+1. Goto directory 'proc' and execute 'chengyu_pinyin_tools.py' for the first time to generate the data file 'idiom_simp.json'.
+2. Then execute 'handle.py', instructions will appear on the terminal.
+3. Now you may guess out handle in merely two attempts. Enjoy.
+
 ```bash
 cd proc
+python chengyu_pinyin_tools.py # only run this for the first time
 python handle.py
 ```
-两次猜出汉兜不是梦！
 
 ## Project Structure
 
